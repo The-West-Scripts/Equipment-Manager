@@ -25,8 +25,23 @@ var xEquipmentSets = {
                 else
                     match = 0;
             });
-            if (match != 10)
-                selectThing.addItem(i, EquipManager.list[i].name, "Equip '" + EquipManager.list[i].name + "'");
+            if (match != 10) {
+                var title = '&lt;div id=&quot;equipshow_' + EquipManager.list[i].equip_manager_id + '&quot; style=&quot;height: 120px; width: 160px; high&quot; &gt;';
+                title += EquipManager.titlepart(i, 'neck', null, 105);
+                title += EquipManager.titlepart(i, 'head', null, 65);
+                title += EquipManager.titlepart(i, 'right_arm', 45, null);
+                title += EquipManager.titlepart(i, 'body', 65, 65);
+                title += EquipManager.titlepart(i, 'left_arm', 45, 145);
+                title += EquipManager.titlepart(i, 'animal', 85, null);
+                title += EquipManager.titlepart(i, 'pants', 105, 65);
+                title += EquipManager.titlepart(i, 'belt', 65, 105);
+                title += EquipManager.titlepart(i, 'yield', 85, 145);
+                title += EquipManager.titlepart(i, 'foot', 105, 105);
+                title += '&lt;/div&gt;';
+                var label = "<span title='" + title + "'>" + EquipManager.list[i].name + "</span>";
+                selectThing.addItem(i, label);
+
+            }
             xEquipmentSets.List[i] = EquipManager.list[i].equip_manager_id;
         }
         selectThing.setWidth(200);
