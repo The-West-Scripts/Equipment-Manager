@@ -1,3 +1,15 @@
+// ==UserScript==
+// @name         xEquipment Manager
+// @version      0.1
+// @description  A quick way of changing inventories in TW
+// @author       Alin "xShteff" Olaru
+// @website      https://xshteff.github.io
+// @include      *.the-west.*/game.php*
+// @downloadURL  https://xshteff.github.io/TW-xEquipment-Manager/quicksetthing.user.js
+// @updateURL    https://xshteff.github.io/TW-xEquipment-Manager/quicksetthing.user.js
+// @grant        none
+// ==/UserScript==
+
 var xEquipmentSets = {
     List: {},
     InitDropdown: function() {
