@@ -1,1 +1,1 @@
-# TW-xEquipment-Manager
+#xEquipment Manager userscript for The-West
