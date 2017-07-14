@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         xEquipment Manager
-// @version      0.2
+// @version      0.3
 // @description  A quick way of changing inventories in TW
 // @author       Alin "xShteff" Olaru
 // @website      https://xshteff.github.io
@@ -22,10 +22,11 @@ var xEquipmentSets = {
             selectThing.setHeader("Equipment Sets");
             for (var i = 0; i < EquipManager.list.length; i++) {
                 var match = 0;
-                ['body', 'neck', 'head', 'right_arm', 'left_arm', 'animal', 'pants', 'belt', 'yield', 'foot'].each(function(el) {
-                    if (Wear.get(el) == null && EquipManager.list[i][el] == null)
+                var types = ['body', 'neck', 'head', 'right_arm', 'left_arm', 'animal', 'pants', 'belt', 'yield', 'foot'];
+                $.each(types, function(el) {
+                    if (Wear.get(types[el]) == null && EquipManager.list[i][types[el]] == null)
                         match++;
-                    else if (Wear.get(el) != null && Wear.get(el).obj.item_id == EquipManager.list[i][el])
+                    else if (Wear.get(types[el]) != null && Wear.get(types[el]).obj.item_id == EquipManager.list[i][types[el]])
                         match++;
                     else
                         match = 0;
@@ -66,7 +67,7 @@ var xEquipmentSets = {
             'title': 'xEquipment Sets',
             'class': 'menulink'
         }).css({
-            'background': 'url("http://i.imgur.com/5LJ8hCP.png")',
+            'background': 'url("https://i.imgur.com/5LJ8hCP.png")',
             'background-position': '0px 0px'
         }).mouseleave(function() {
             $(this).css("background-position", "0px 0px");
