@@ -1,12 +1,12 @@
 // ==UserScript==
-// @name         xEquipment Manager
+// @name         Equipment Manager
 // @version      0.3
 // @description  A quick way of changing inventories in TW
 // @author       Alin "xShteff" Olaru
 // @website      https://xshteff.github.io
 // @include      *.the-west.*/game.php*
-// @downloadURL  https://xshteff.github.io/TW-xEquipment-Manager/quicksetthing.user.js
-// @updateURL    https://xshteff.github.io/TW-xEquipment-Manager/quicksetthing.user.js
+// @downloadURL  https://the-west-scripts.github.io/Equipment-Manager/script.user.js
+// @updateURL    https://the-west-scripts.github.io/Equipment-Manager/script.user.js
 // @grant        none
 // ==/UserScript==
 
